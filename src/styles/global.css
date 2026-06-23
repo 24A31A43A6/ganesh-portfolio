@@ -1,0 +1,75 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap');
+
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+}
+
+html{
+  scroll-behavior:smooth;
+}
+
+html,
+body,
+#root{
+  width:100%;
+  min-height:100vh;
+
+  background:#000;
+
+  font-family:
+    'Outfit',
+    sans-serif;
+
+  overflow-x:hidden;
+}
+
+/* REMOVE BLUE TAP HIGHLIGHT */
+*{
+  -webkit-tap-highlight-color:
+    transparent;
+}
+
+/* LINKS */
+a{
+  text-decoration:none;
+  color:inherit;
+}
+
+/* BUTTON */
+button{
+  border:none;
+  outline:none;
+
+  cursor:pointer;
+
+  font-family:
+    'Outfit',
+    sans-serif;
+}
+
+/* IMAGE */
+img{
+  width:100%;
+  display:block;
+}
+
+/* SCROLLBAR */
+::-webkit-scrollbar{
+  width:8px;
+}
+
+::-webkit-scrollbar-track{
+  background:#0b0b0b;
+}
+
+::-webkit-scrollbar-thumb{
+  border-radius:20px;
+
+  background:
+    linear-gradient(
+      #9a661d,
+      #f6c871
+    );
+}

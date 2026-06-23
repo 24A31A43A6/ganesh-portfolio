@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 120" width="1200" height="240" aria-labelledby="title">
+  <title id="title">SG Professional Wordmark</title>
+  <defs>
+    <linearGradient id="goldGrad" x1="0" x2="1">
+      <stop offset="0" stopColor="#f4d27d"/>
+      <stop offset="0.5" stopColor="#e8c547"/>
+      <stop offset="1" stopColor="#c9a72d"/>
+    </linearGradient>
+    <filter id="shadow">
+      <feDropShadow dx="1" dy="1" stdDeviation="1.5" floodOpacity="0.2"/>
+    </filter>
+  </defs>
+
+  <!-- Black background -->
+  <rect width="600" height="120" fill="#000000"/>
+
+  <!-- SG Mark in rounded square -->
+  <g transform="translate(20,12)">
+    <rect width="96" height="96" rx="12" fill="url(#goldGrad)" filter="url(#shadow)"/>
+    
+    <!-- Refined serif-style S and G in white -->
+    <g transform="translate(24,28)" fill="#ffffff" font-family="Georgia, serif" font-weight="700" font-size="48" letter-spacing="2">
+      <text x="0" y="40">SG</text>
+    </g>
+  </g>
+
+  <!-- Vertical divider line -->
+  <line x1="135" y1="25" x2="135" y2="95" stroke="#c9a72d" stroke-width="1.5" opacity="0.8"/>
+
+  <!-- SAI GANESH text -->
+  <g transform="translate(155,35)">
+    <text x="0" y="0" font-family="Arial, sans-serif" font-weight="700" font-size="28" letter-spacing="1.5" fill="url(#goldGrad)" filter="url(#shadow)">SAI GANESH</text>
+  </g>
+</svg>

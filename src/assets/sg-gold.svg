@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 100" width="600" height="300" aria-labelledby="title desc">
+  <title id="title">SG gold monogram</title>
+  <desc id="desc">Elegant gold SG monogram with metallic sheen and bevel.</desc>
+  <defs>
+    <linearGradient id="goldGrad" x1="0" x2="1">
+      <stop offset="0" stop-color="#f6e27a"/>
+      <stop offset="0.4" stop-color="#ffd26a"/>
+      <stop offset="0.7" stop-color="#d4a017"/>
+      <stop offset="1" stop-color="#a66e00"/>
+    </linearGradient>
+    <radialGradient id="gloss" cx="30%" cy="20%" r="60%">
+      <stop offset="0" stop-color="#ffffff" stop-opacity="0.9"/>
+      <stop offset="1" stop-color="#ffffff" stop-opacity="0"/>
+    </radialGradient>
+    <filter id="innerShadow" x="-50%" y="-50%" width="200%" height="200%">
+      <feOffset dx="0" dy="2" result="off"/>
+      <feGaussianBlur in="off" stdDeviation="3" result="blur"/>
+      <feComposite in="blur" in2="SourceGraphic" operator="arithmetic" k2="-1" k3="1" result="inner"/>
+      <feColorMatrix type="matrix" values="0 0 0 0 0.03 0 0 0 0 0.01 0 0 0 0 0 0 0 0 0.6 0"/>
+    </filter>
+  </defs>
+
+  <rect width="100%" height="100%" fill="transparent"/>
+
+  <g transform="translate(0,0)" fill="url(#goldGrad)" stroke="#6f4a00" stroke-width="1">
+    <!-- Bold geometric S made of two shapes for bevel illusion -->
+    <path d="M28 22 C28 12,62 12,62 22 C62 30,40 30,40 36 C40 44,62 44,62 52 C62 64,28 64,28 52" />
+
+    <!-- G as thick ring with inward notch -->
+    <path d="M140 50 a30 30 0 1 0 0.1 0" stroke-width="10" fill="none" stroke-linecap="round"/>
+    <path d="M148 50 L132 50" stroke="#6f4a00" stroke-width="10" stroke-linecap="round"/>
+
+    <!-- Gloss overlay -->
+    <path d="M20 10 C50 0,90 0,110 14 C130 28,160 24,170 12 L170 8 C153 20,124 26,104 14 C84 2,50 2,20 22 C40 42,12 46,12 32 Z" fill="url(#gloss)" opacity="0.45"/>
+  </g>
+
+  <!-- subtle inner shadow for depth -->
+  <g filter="url(#innerShadow)" opacity="0.18">
+    <path d="M28 22 C28 12,62 12,62 22 C62 30,40 30,40 36 C40 44,62 44,62 52 C62 64,28 64,28 52" fill="none" stroke="#000" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
+    <circle cx="140" cy="50" r="30" fill="none" stroke="#000" stroke-width="8"/>
+  </g>
+</svg>

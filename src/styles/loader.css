@@ -1,0 +1,342 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;500&display=swap');
+
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+}
+
+body{
+  overflow:hidden;
+  background:#040404;
+  font-family:'Montserrat',sans-serif;
+}
+
+.cinematic-loader{
+  width:100%;
+  height:100vh;
+
+  display:flex;
+  justify-content:center;
+  align-items:center;
+
+  overflow:hidden;
+  position:relative;
+
+  background:
+    radial-gradient(
+      circle at center,
+      rgba(176,138,72,.06),
+      #040404 72%
+    );
+}
+
+/* SOFT BACKGROUND GLOW */
+.cinematic-loader::before{
+  content:'';
+
+  position:absolute;
+
+  width:850px;
+  height:850px;
+
+  background:
+    radial-gradient(
+      circle,
+      rgba(230,190,110,.05),
+      transparent 70%
+    );
+
+  filter:blur(40px);
+}
+
+/* MAIN CONTENT */
+.loader-container{
+  text-align:center;
+  z-index:5;
+}
+
+/* TOP SMALL TEXT */
+.loader-heading{
+  color:#a87c33;
+
+  font-size:12px;
+  font-weight:300;
+
+  letter-spacing:12px;
+
+  margin-bottom:28px;
+
+  animation:
+    fadeUp 1s ease;
+}
+
+/* SAI */
+.loader-sai{
+  font-size:88px;
+  line-height:.9;
+
+  font-weight:200;
+  letter-spacing:2px;
+
+  color:#e9e9e9;
+
+  animation:
+    fadeUp 1.2s ease;
+}
+
+/* GANESH */
+.ganesh-wrapper{
+  position:relative;
+}
+
+.loader-ganesh{
+  font-size:132px;
+  line-height:.9;
+
+  font-weight:500;
+  letter-spacing:-1px;
+
+  background:
+    linear-gradient(
+      180deg,
+      #fff8e8 0%,
+      #f6d48d 40%,
+      #d8a445 100%
+    );
+
+  -webkit-background-clip:text;
+  -webkit-text-fill-color:
+    transparent;
+
+  position:relative;
+  z-index:2;
+
+  animation:
+    fadeUp 1.3s ease,
+    ganeshGoldGlow 3.5s ease-in-out infinite;
+}
+/* THIN LINE BELOW */
+.loader-line{
+  width:170px;
+  height:2px;
+
+  margin:24px auto 28px;
+
+  position:relative;
+}
+
+.loader-line::before{
+  content:'';
+
+  position:absolute;
+
+  left:50%;
+  top:50%;
+
+  transform:
+    translate(-50%,-50%);
+
+  width:0;
+  height:1px;
+
+  background:
+    linear-gradient(
+      90deg,
+      transparent,
+      rgba(255,235,190,.95),
+      transparent
+    );
+
+  animation:
+    elegantLine 1.5s ease forwards;
+}
+
+/* ROLE */
+.loader-role{
+  color:#878787;
+
+  font-size:14px;
+  font-weight:300;
+
+  letter-spacing:7px;
+
+  animation:
+    fadeUp 1.5s ease;
+}
+
+/* FOOTER */
+.loader-footer{
+  margin-top:72px;
+
+  color:#a87c33;
+
+  font-size:12px;
+  font-weight:300;
+
+  letter-spacing:9px;
+}
+
+/* FLOATING DOTS */
+.dot{
+  display:inline-block;
+
+  animation:
+    floatDots 1.4s ease-in-out infinite;
+}
+
+.dot2{
+  animation-delay:.2s;
+}
+
+.dot3{
+  animation-delay:.4s;
+}
+
+/* PARTICLES */
+.particle{
+  position:absolute;
+
+  border-radius:50%;
+
+  background:#d8b15f;
+
+  box-shadow:
+    0 0 10px
+    rgba(216,177,95,.7);
+
+  animation:
+    floatParticle
+    4s ease-in-out infinite;
+}
+
+.p1{
+  width:4px;
+  height:4px;
+  top:30%;
+  left:12%;
+}
+
+.p2{
+  width:5px;
+  height:5px;
+  top:35%;
+  right:16%;
+}
+
+.p3{
+  width:4px;
+  height:4px;
+  bottom:18%;
+  left:22%;
+}
+
+.p4{
+  width:5px;
+  height:5px;
+  bottom:23%;
+  right:18%;
+}
+
+.p5{
+  width:4px;
+  height:4px;
+  top:24%;
+  right:22%;
+}
+
+.p6{
+  width:4px;
+  height:4px;
+  bottom:13%;
+  left:50%;
+}
+
+/* ANIMATIONS */
+
+@keyframes fadeUp{
+  from{
+    opacity:0;
+    transform:
+      translateY(30px);
+  }
+
+  to{
+    opacity:1;
+    transform:
+      translateY(0);
+  }
+}
+
+@keyframes elegantLine{
+  from{
+    width:0;
+    opacity:0;
+  }
+
+  to{
+    width:100%;
+    opacity:.8;
+  }
+}
+
+@keyframes ganeshGoldGlow{
+  0%,100%{
+    filter:
+      drop-shadow(
+        0 0 8px
+        rgba(246,200,113,.20)
+      )
+      drop-shadow(
+        0 0 18px
+        rgba(246,200,113,.12)
+      )
+      drop-shadow(
+        0 0 35px
+        rgba(246,200,113,.08)
+      );
+  }
+
+  50%{
+    filter:
+      drop-shadow(
+        0 0 14px
+        rgba(246,200,113,.45)
+      )
+      drop-shadow(
+        0 0 35px
+        rgba(246,200,113,.28)
+      )
+      drop-shadow(
+        0 0 60px
+        rgba(246,200,113,.18)
+      );
+  }
+}
+@keyframes floatDots{
+  0%,100%{
+    transform:
+      translateY(0);
+
+    opacity:.35;
+  }
+
+  50%{
+    transform:
+      translateY(-7px);
+
+    opacity:1;
+  }
+}
+
+@keyframes floatParticle{
+  0%,100%{
+    transform:
+      translateY(0);
+  }
+
+  50%{
+    transform:
+      translateY(-10px);
+  }
+}
